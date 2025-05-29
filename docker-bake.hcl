@@ -1,9 +1,9 @@
 target "build" {
   dockerfile = "Dockerfile"
-  tags = ["Ackermaneduar/docker:latest"]  # Reemplaza con tu info
+  tags = ["${DOCKER_USERNAME}/my-image:latest"]  # Usa la misma variable que en tu workflow
 }
 
 target "validate-build" {
   inherits = ["build"]
-  call = "check"  # Modo validación
+  call = "check"  # Modo de validación
 }
