@@ -36,4 +36,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: tu-usuario/nombre-app:latest  # Reemplaza aquí
+          tags: Ackermaneduar/docker:latest  # Reemplaza aquí
