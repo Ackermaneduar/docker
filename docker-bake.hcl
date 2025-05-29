@@ -1,9 +1,9 @@
-target "build" {
-  dockerfile = "Dockerfile"
-  tags = ["${DOCKER_USERNAME}/my-image:latest"]  # Usa la misma variable que en tu workflow
+group "default" {
+  targets = ["web"]
 }
 
-target "validate-build" {
-  inherits = ["build"]
-  call = "check"  # Modo de validación
+target "web" {
+  context = "."
+  dockerfile = "Dockerfile"
+  tags = ["Ackermaneduar/my-image:latest"]
 }
